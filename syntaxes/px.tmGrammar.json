@@ -4,7 +4,7 @@
   "fileTypes": ["px"],
 	"patterns": [{
       "name": "keyword.px",
-      "match": "\\b(void|bool|i32|u32|i64|u64|f32|f64|str)\\b"
+      "match": "\\b(void|bool|i32|u32|i64|u64|f32|f64|str|if|match|break|continue|pass|goto|suspend|loop|for|null|true|false)\\b"
     }, {
       "include": "#comments"
     }, {
@@ -25,14 +25,8 @@
         "name": "keyword.structure.px",
 				"match": "\\b(scope|enum|class|trait|annot|coroutine|contract)\\b"
       }, {
-        "name": "keyword.statement.px",
-				"match": "@extern"
-      }, {
         "name": "keyword.conditional.px",
-        "match": "\\b(if|match|break|continue|pass|goto)\\b"
-      }, {
-        "name": "keyword.repeat.px",
-        "match": "\\b(loop|for)\\b"
+				"match": "\\b(@extern|@lateinit|extern|lateinit)\\b"
       }]
     },
     "comments": {
@@ -44,6 +38,10 @@
           "name": "comment.line.double-slash.px",
           "begin": "#",
           "end": "$"
+        }, {
+          "name": "comment.block.px",
+          "begin": "#/",
+          "end": "/#"
         }
       ]
     },
