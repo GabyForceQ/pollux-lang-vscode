@@ -3,30 +3,37 @@
   "scopeName": "source.px",
   "fileTypes": ["px"],
 	"patterns": [
+    {
+      "name": "keyword.control.px",
+      "match": "\\b(if|loop|for|match|break|continue|pass|goto)\\b"
+    },
 		{
 			"include": "#keywords"
-		},
+    },
+    {
+      "include": "#comments"
+    },
 		{
 			"include": "#strings"
-		}
+    }
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.decl.px",
-				"match": "\\b(unit, let, mut, fun, type, unittest)\\b"
+				"match": "\\b(unit|let|mut|fun|type|unittest)\\b"
       }, {
         "name": "keyword.primitive.px",
-				"match": "\\b(void, bool, i32, u32, i64, u64, f32, f64, str)\\b"
+				"match": "\\b(void|bool|i32|u32|i64|u64|f32|f64|str)\\b"
       }, {
         "name": "keyword.reference.px",
-				"match": "\\b(shared, unique, unsafe)\\b"
+				"match": "\\b(shared|unique|unsafe)\\b"
       }, {
         "name": "keyword.scope.px",
-				"match": "\\b(scope, enum, class, trait, annot, coroutine, contract)\\b"
+				"match": "\\b(scope|enum|class|trait|annot|coroutine|contract)\\b"
       }, {
         "name": "keyword.annotation.px",
-				"match": "\\b(@extern)\\b"
+				"match": "@extern"
       }]
     },
     "comments": {
@@ -54,9 +61,5 @@
 				}
 			]
     }
-  },
-  "todo-keyword": {
-    "match": "TODO",
-    "name": "keyword.todo"
   }
 }
