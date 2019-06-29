@@ -15,16 +15,19 @@
       "end": "",
 			"patterns": [{
 				"name": "keyword.decl.px",
-				"match": "\\b(unit, let, mut, fn, type, unittest)\\b"
+				"match": "\\b(unit, let, mut, fun, type, unittest)\\b"
       }, {
         "name": "keyword.primitive.px",
-				"match": "\\b(void, bool, i32, u32, i64, u64, str)\\b"
+				"match": "\\b(void, bool, i32, u32, i64, u64, f32, f64, str)\\b"
       }, {
         "name": "keyword.reference.px",
 				"match": "\\b(shared, unique, unsafe)\\b"
       }, {
         "name": "keyword.scope.px",
 				"match": "\\b(scope, enum, class, trait, annot, coroutine, contract)\\b"
+      }, {
+        "name": "keyword.annotation.px",
+				"match": "\\b(@extern)\\b"
       }]
 		},
 		"strings": {
