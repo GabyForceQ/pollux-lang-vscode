@@ -2,49 +2,46 @@
   "name": "px",
   "scopeName": "source.px",
   "fileTypes": ["px"],
-	"patterns": [
-    {
-      "name": "keyword.control.px",
-      "match": "\\b(if|loop|for|match|break|continue|pass|goto)\\b"
-    },
-		{
-			"include": "#keywords"
-    },
-    {
+	"patterns": [{
+      "name": "keyword.px",
+      "match": "\\b(void|bool|i32|u32|i64|u64|f32|f64|str)\\b"
+    }, {
       "include": "#comments"
-    },
-		{
+    }, {
 			"include": "#strings"
+    }, {
+			"include": "#keywords"
     }
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
-				"name": "keyword.decl.px",
+				"name": "keyword.storage.px",
 				"match": "\\b(unit|let|mut|fun|type|unittest)\\b"
       }, {
-        "name": "keyword.primitive.px",
-				"match": "\\b(void|bool|i32|u32|i64|u64|f32|f64|str)\\b"
-      }, {
-        "name": "keyword.reference.px",
+        "name": "keyword.type.px",
 				"match": "\\b(shared|unique|unsafe)\\b"
       }, {
-        "name": "keyword.scope.px",
+        "name": "keyword.structure.px",
 				"match": "\\b(scope|enum|class|trait|annot|coroutine|contract)\\b"
       }, {
-        "name": "keyword.annotation.px",
+        "name": "keyword.statement.px",
 				"match": "@extern"
+      }, {
+        "name": "keyword.conditional.px",
+        "match": "\\b(if|match|break|continue|pass|goto)\\b"
+      }, {
+        "name": "keyword.repeat.px",
+        "match": "\\b(loop|for)\\b"
       }]
     },
     "comments": {
-      "patterns":[
-        {
+      "patterns":[{
           "name": "comment.line.documentation.px",
           "begin": "#[!/](?=[^/])",
           "end": "$"
-        },
-        {
-          "name": "comment.line.single-sharp.px",
+        }, {
+          "name": "comment.line.double-slash.px",
           "begin": "#",
           "end": "$"
         }
@@ -54,8 +51,7 @@
 			"name": "string.quoted.double.px",
 			"begin": "\"",
 			"end": "\"",
-			"patterns": [
-				{
+			"patterns": [{
 					"name": "constant.character.escape.px",
 					"match": "\\\\."
 				}
