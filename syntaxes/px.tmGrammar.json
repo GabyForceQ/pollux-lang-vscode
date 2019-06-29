@@ -26,7 +26,7 @@
 				"match": "\\b(scope|enum|class|trait|annot|coroutine|contract)\\b"
       }, {
         "name": "keyword.conditional.px",
-				"match": "\\b(@extern|@lateinit|extern|lateinit)\\b"
+				"match": "\\b(@|extern|lateinit)\\b"
       }]
     },
     "comments": {
