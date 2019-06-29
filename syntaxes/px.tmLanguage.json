@@ -1,0 +1,43 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "pollux",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+      "begin": "",
+      "end": "",
+			"patterns": [{
+				"name": "keyword.decl.px",
+				"match": "\\b(unit, let, mut, fn, type, unittest)\\b"
+      }, {
+        "name": "keyword.primitive.px",
+				"match": "\\b(void, bool, i32, u32, i64, u64, str)\\b"
+      }, {
+        "name": "keyword.reference.px",
+				"match": "\\b(shared, unique, unsafe)\\b"
+      }, {
+        "name": "keyword.scope.px",
+				"match": "\\b(scope, enum, class, trait, annot, coroutine, contract)\\b"
+      }]
+		},
+		"strings": {
+			"name": "string.quoted.double.px",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.px",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.px"
+}

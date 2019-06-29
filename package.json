@@ -1,0 +1,30 @@
+{
+    "name": "px",
+    "displayName": "pollux-lang",
+    "description": "Programming Language for Pollux Engine.",
+    "version": "0.0.1",
+    "publisher": "forcequality",
+    "engines": {
+        "vscode": "^1.35.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "icon": "icon.png",
+    "contributes": {
+        "languages": [{
+            "id": "px",
+            "aliases": ["pollux", "px"],
+            "extensions": [".px"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "px",
+            "scopeName": "source.px",
+            "path": "./syntaxes/px.tmLanguage.json"
+        }]
+    },
+    "dependencies": {
+      "npm": "^5.7.1"
+    }
+}
