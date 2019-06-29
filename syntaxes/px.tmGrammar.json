@@ -1,10 +1,7 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "pollux",
+  "name": "px",
   "scopeName": "source.px",
-  "fileTypes": [
-    "px"
-  ],
+  "fileTypes": ["px"],
 	"patterns": [
 		{
 			"include": "#keywords"
@@ -15,8 +12,6 @@
 	],
 	"repository": {
 		"keywords": {
-      "begin": "",
-      "end": "",
 			"patterns": [{
 				"name": "keyword.decl.px",
 				"match": "\\b(unit, let, mut, fun, type, unittest)\\b"
@@ -33,7 +28,21 @@
         "name": "keyword.annotation.px",
 				"match": "\\b(@extern)\\b"
       }]
-		},
+    },
+    "comments": {
+      "patterns":[
+        {
+          "name": "comment.line.documentation.px",
+          "begin": "#[!/](?=[^/])",
+          "end": "$"
+        },
+        {
+          "name": "comment.line.single-sharp.px",
+          "begin": "#",
+          "end": "$"
+        }
+      ]
+    },
 		"strings": {
 			"name": "string.quoted.double.px",
 			"begin": "\"",
@@ -44,6 +53,10 @@
 					"match": "\\\\."
 				}
 			]
-		}
-	}
+    }
+  },
+  "todo-keyword": {
+    "match": "TODO",
+    "name": "keyword.todo"
+  }
 }
