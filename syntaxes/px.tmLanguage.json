@@ -1,6 +1,10 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "pollux",
+  "name": "pollux",
+  "scopeName": "source.px",
+  "fileTypes": [
+    "px"
+  ],
 	"patterns": [
 		{
 			"include": "#keywords"
@@ -41,6 +45,5 @@
 				}
 			]
 		}
-	},
-	"scopeName": "source.px"
+	}
 }

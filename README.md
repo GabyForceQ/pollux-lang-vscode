@@ -14,3 +14,7 @@
 * Used as brackets: { }, [ ], ( ), < >
 * That are auto closed when typing: { }, [ ], ( ), < >, " ", ' '
 * That that can be used to surround a selection: { }, [ ], ( ), < >, " ", ' '
+---
+## Comments
+* Single line comment: # text
+* Multiline comment: ## text ##
