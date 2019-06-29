@@ -7,8 +7,8 @@
     "homepage": "https://github.com/GabyForceQ/pollux-lang-vscode/blob/master/README.md",
     "license": "SEE LICENSE IN LICENSE.md",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/GabyForceQ/pollux-lang-vscode"
+        "type": "git",
+        "url": "https://github.com/GabyForceQ/pollux-lang-vscode"
     },
     "engines": {
         "vscode": "^1.35.0"
@@ -18,19 +18,28 @@
     ],
     "icon": "icon.png",
     "contributes": {
-        "languages": [{
-            "id": "px",
-            "aliases": ["pollux", "px"],
-            "extensions": [".px"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "px",
-            "scopeName": "source.px",
-            "path": "./syntaxes/px.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "px",
+                "aliases": [
+                    "pollux",
+                    "px"
+                ],
+                "extensions": [
+                    ".px"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "px",
+                "scopeName": "source.px",
+                "path": "./syntaxes/px.tmLanguage.json"
+            }
+        ]
     },
     "dependencies": {
-      "npm": "^6.9.2"
+        "npm": "^6.9.2"
     }
 }
