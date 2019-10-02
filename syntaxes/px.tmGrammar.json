@@ -4,7 +4,10 @@
   "fileTypes": ["px"],
 	"patterns": [{
       "name": "keyword.px",
-      "match": "\\b(void|bool|i32|u32|i64|u64|f32|f64|str|if|match|break|continue|pass|goto|suspend|loop|for|null|true|false)\\b"
+      "match": "\\b(ver|bool|char|wchar|dchar|ibyte|ubyte|isize|usize|i32|u32|i64|u64|f32|f64|if32|if64|cf32|cf64|str|if|match|break|continue|pass|goto|suspend|loop|for|null|true|false|print|println|sizeof|typeof|offsetof|alloc|realloc|release|relect|inject|comptime|is|in|out|inout|stream|system|init|ctor|dtor|self|super|prop|oper|event|get|set|field|try|catch|defer|async|await|promise|resume|yield|flip|flop|alias|friend|require|involve|assert|literal|deduction|synchronized|invariant|launch|run|move|ref|assume|debug|unreachable|cast|bind|atomic|version|apply|file|dir|tailrec)\\b"
+    }, {
+      "name": "keyword.conditional.px",
+      "match": "@(extern|lateinit|public|private|protected|internal|companion|sealed|pure|nothrow|override|open|explicit|inline|warn|error|todo|info|location|stackonly|heaponly|lazy|readonly)\\b"
     }, {
       "include": "#comments"
     }, {
@@ -17,16 +20,13 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.storage.px",
-				"match": "\\b(unit|let|mut|fun|type|unittest)\\b"
+				"match": "\\b(unit|use|let|mut|fun|type|test|any|layout|uniform)\\b"
       }, {
         "name": "keyword.type.px",
 				"match": "\\b(shared|unique|unsafe)\\b"
       }, {
         "name": "keyword.structure.px",
-				"match": "\\b(scope|enum|class|trait|annot|coroutine|contract)\\b"
-      }, {
-        "name": "keyword.conditional.px",
-				"match": "\\b(@|extern|lateinit)\\b"
+				"match": "\\b(cpp|scope|enum|object|class|trait|union|annot|coroutine|contract|shader)\\b"
       }]
     },
     "comments": {
