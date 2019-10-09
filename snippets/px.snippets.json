@@ -9,7 +9,7 @@
   "for_line": {
     "prefix": "for",
     "body": [
-      "for $1 in $2 => $0",
+      "for $1 in $2 => $0"
     ],
     "description": "Insert for statement"
   },
