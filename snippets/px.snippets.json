@@ -1,0 +1,65 @@
+{
+  "unit": {
+    "prefix": "unit",
+    "body": [
+      "unit $1\n\n$0"
+    ],
+    "description": "Insert unit name"
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for $1 in $2 => $0",
+      "for $1 in $2 {\n\t$0\n}"
+    ],
+    "description": "Insert for statement"
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if $1 => $0",
+      "if $1 {\n\t$0\n}"
+    ],
+    "description": "Insert if statement"
+  },
+  "comptime": {
+    "prefix": "comptime println",
+    "body": [
+      "comptime println $0"
+    ],
+    "description": "Insert compile time code execution"
+  },
+  "always": {
+    "prefix": "always println",
+    "body": [
+      "comptime println $0"
+    ],
+    "description": "Insert both compile time, runtime code execution"
+  },
+  "fun": {
+    "prefix": "fun",
+    "body": [
+      "fun $1($2) -> $3 {\n\t$0\n}"
+    ],
+    "description": "Insert function"
+  },
+  "val": {
+    "prefix": "val",
+    "body": [
+      "val $1 = $0"
+    ],
+    "description": "Insert constant"
+  },
+  "var": {
+    "prefix": "var",
+    "body": [
+      "var $1 = $0"
+    ],
+    "description": "Insert variable"
+  },
+  "@": {
+    "prefix": "@[",
+    "body": "@[$1]\n$0"
+  },
+  "description": "Insert annotation list"
+}

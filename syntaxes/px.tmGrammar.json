@@ -1,13 +1,13 @@
 {
   "name": "px",
   "scopeName": "source.px",
-  "fileTypes": ["px"],
+  "fileTypes": ["px", "pxs"],
 	"patterns": [{
       "name": "keyword.px",
-      "match": "\\b(always|reflect|ver|var|val|bool|char|wchar|dchar|ibyte|ubyte|isize|usize|i32|u32|i64|u64|f32|f64|if32|if64|cf32|cf64|str|if|else|match|break|continue|pass|goto|suspend|loop|for|null|true|false|print|println|sizeof|typeof|offsetof|alloc|realloc|release|relect|inject|comptime|is|in|out|inout|stream|system|init|ctor|dtor|self|super|prop|oper|event|get|set|field|try|catch|defer|async|await|promise|resume|yield|flip|flop|alias|friend|require|involve|assert|literal|deduction|synchronized|invariant|launch|run|move|ref|assume|debug|unreachable|cast|bind|atomic|version|apply|file|dir|tailrec)\\b"
+      "match": "\\b(always|impl|infix|reflect|ver|var|val|bool|char|wchar|dchar|ibyte|ubyte|isize|usize|i32|u32|i64|u64|f32|f64|if32|if64|cf32|cf64|str|if|else|match|break|continue|pass|goto|suspend|loop|for|null|true|false|print|println|sizeof|typeof|offsetof|alloc|realloc|release|relect|inject|comptime|is|in|out|inout|stream|system|init|ctor|dtor|self|super|operator|event|get|set|field|try|catch|defer|async|await|promise|resume|yield|flip|flop|alias|friend|require|involve|assert|literal|deduction|synchronized|invariant|launch|run|move|ref|assume|unreachable|as|bind|atomic|tailrec)\\b"
     }, {
       "name": "keyword.conditional.px",
-      "match": "@(extern|lateinit|public|private|protected|internal|companion|sealed|pure|nothrow|override|open|explicit|inline|warn|error|todo|info|location|stackonly|heaponly|lazy|readonly)\\b"
+      "match": "@[(noreturn|extern|lateinit|public|private|protected|internal|companion|sealed|pure|nothrow|override|open|explicit|inline|warn|error|todo|info|location|stackonly|heaponly|lazy)]\\b"
     }, {
       "include": "#comments"
     }, {

@@ -16,6 +16,7 @@
   "categories": [
     "Programming Languages"
   ],
+  "preview": true,
   "icon": "icon.png",
   "contributes": {
     "languages": [
@@ -32,6 +33,12 @@
         "language": "px",
         "scopeName": "source.px",
         "path": "./syntaxes/px.tmGrammar.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "px",
+        "path": "./snippets/px.snippets.json"
       }
     ]
   },
