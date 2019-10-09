@@ -70,8 +70,32 @@
     "description": "Insert variable"
   },
   "annot_list": {
-    "prefix": "@",
+    "prefix": "annot",
     "body": "@[$1]\n$0"
+  },
+  "annot_def": {
+    "prefix": "annot",
+    "body": "annot $1($0)\n"
+  },
+  "annot": {
+    "prefix": "annot",
+    "body": "annot $1($2) {\n\t$0\n}"
+  },
+  "new_shared": {
+    "prefix": "new shared",
+    "body": "ref $1 = shared($2)\n$0"
+  },
+  "new_unique": {
+    "prefix": "new unique",
+    "body": "ref $1 = unique($2)\n$0"
+  },
+  "new_scoped": {
+    "prefix": "new scoped",
+    "body": "ref $1 = scoped($2)\n$0"
+  },
+  "new_unsafe": {
+    "prefix": "new unsafe",
+    "body": "ref $1 = unsafe($2)\n$0"
   },
   "description": "Insert annotation list"
 }
