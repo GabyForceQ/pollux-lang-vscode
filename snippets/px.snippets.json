@@ -44,7 +44,7 @@
   "always": {
     "prefix": "always println",
     "body": [
-      "comptime println $0"
+      "always println $0"
     ],
     "description": "Insert both compile time, runtime code execution"
   },
@@ -71,31 +71,61 @@
   },
   "annot_list": {
     "prefix": "annot",
-    "body": "@[$1]\n$0"
+    "body": "@[$1]\n$0",
+    "description": "Insert annotation list"
   },
   "annot_def": {
     "prefix": "annot",
-    "body": "annot $1($0)\n"
+    "body": "annot $1($0)\n",
+    "description": "Insert annotation"
   },
   "annot": {
     "prefix": "annot",
-    "body": "annot $1($2) {\n\t$0\n}"
+    "body": "annot $1($2) {\n\t$0\n}",
+    "description": "Insert annotation"
   },
-  "new_shared": {
-    "prefix": "new shared",
-    "body": "ref $1 = shared($2)\n$0"
+  "var_new_shared": {
+    "prefix": "var new shared",
+    "body": "var $1 = shared!$2($3)\n$0",
+    "description": "Insert shared variable"
   },
-  "new_unique": {
-    "prefix": "new unique",
-    "body": "ref $1 = unique($2)\n$0"
+  "val_new_shared": {
+    "prefix": "val new shared",
+    "body": "val $1 = shared!$2($3)\n$0",
+    "description": "Insert shared constant"
   },
-  "new_scoped": {
-    "prefix": "new scoped",
-    "body": "ref $1 = scoped($2)\n$0"
+  "var_new_unique": {
+    "prefix": "var new unique",
+    "body": "var $1 = unique!$2($3)\n$0",
+    "description": "Insert unique variable"
   },
-  "new_unsafe": {
-    "prefix": "new unsafe",
-    "body": "ref $1 = unsafe($2)\n$0"
+  "val_new_unique": {
+    "prefix": "val new unique",
+    "body": "val $1 = unique!$2($3)\n$0",
+    "description": "Insert unique constant"
   },
-  "description": "Insert annotation list"
+  "var_new_scoped": {
+    "prefix": "var new scoped",
+    "body": "var $1 = scoped!$2($3)\n$0",
+    "description": "Insert scoped variable"
+  },
+  "val_new_scoped": {
+    "prefix": "val new scoped",
+    "body": "val $1 = scoped!$2($3)\n$0",
+    "description": "Insert scoped constant"
+  },
+  "var_new_unsafe": {
+    "prefix": "var new unsafe",
+    "body": "var $1 = unsafe!$2($3)\n$0",
+    "description": "Insert unsafe variable"
+  },
+  "val_new_unsafe": {
+    "prefix": "val new unsafe",
+    "body": "val $1 = unsafe!$2($3)\n$0",
+    "description": "Insert unsafe constant"
+  },
+  "type": {
+    "prefix": "type",
+    "body": "type $1(any $2) extends $3(any $2) {\n\t$0\n}"
+  }
 }

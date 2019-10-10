@@ -4,7 +4,7 @@
   "fileTypes": ["px", "pxs"],
 	"patterns": [{
       "name": "keyword.px",
-      "match": "\\b(always|impl|infix|reflect|ver|var|val|bool|char|wchar|dchar|ibyte|ubyte|isize|usize|i32|u32|i64|u64|f32|f64|if32|if64|cf32|cf64|str|if|else|match|break|continue|pass|goto|suspend|loop|for|null|true|false|print|println|sizeof|typeof|offsetof|alloc|realloc|release|relect|inject|comptime|is|in|out|inout|stream|system|init|ctor|dtor|self|super|operator|event|get|set|field|try|catch|defer|async|await|promise|resume|yield|flip|flop|alias|friend|require|involve|assert|literal|deduction|synchronized|invariant|launch|run|move|ref|assume|unreachable|as|bind|atomic|tailrec)\\b"
+      "match": "\\b(__cpp|__file|__line|always|impl|extends|infix|reflect|ver|var|val|bool|char|wchar|dchar|ibyte|ubyte|isize|usize|i16|u16|i32|u32|i64|u64|f32|f64|if32|if64|cf32|cf64|str|if|else|match|break|continue|pass|goto|suspend|loop|for|null|true|false|print|println|sizeof|typeof|offsetof|alloc|realloc|release|relect|inject|comptime|is|in|out|inout|stream|system|init|ctor|dtor|self|super|operator|event|get|set|field|try|catch|defer|async|await|promise|resume|yield|flip|flop|alias|friend|require|involve|assert|literal|deduction|synchronized|invariant|launch|run|move|ref|assume|unreachable|as|bind|atomic|tailrec)\\b"
     }, {
       "name": "keyword.conditional.px",
       "match": "@[(noreturn|extern|lateinit|public|private|protected|internal|companion|sealed|pure|nothrow|override|open|explicit|inline|warn|error|todo|info|location|stackonly|heaponly|lazy)]\\b"
