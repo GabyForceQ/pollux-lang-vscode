@@ -43,7 +43,7 @@
     ]
   },
   "dependencies": {
-    "npm": "^6.9.2"
+    "npm": "^6.13.4"
   },
   "devDependencies": {
     "js-yaml": "^3.13.1"
